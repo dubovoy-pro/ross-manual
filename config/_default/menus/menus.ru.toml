@@ -29,7 +29,7 @@
   url = "/tutorial/lorem/"
 
 [[main]]
-  name = "Docs"
+  name = "Документация"
   url = "/docs/prologue/introduction/"
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
@@ -40,25 +40,25 @@
 #   weight = 15
 
 [[main]]
-  name = "Blog"
+  name = "Блог"
   url = "/blog/"
   weight = 20
 
 [[main]]
-  name = "Get Started"
+  name = "Начать"
   weight = 30
   identifier = "get-started"
   url = "/docs/prologue/introduction/"
 
 [[main]]
-  name = "Quick Start"
+  name = "Быстрый старт"
   weight = 40
   identifier = "quick-start"
   url = "/docs/prologue/quick-start/"
   parent = "get-started"
 
 [[main]]
-  name = "Tutorial"
+  name = "Руководство"
   weight = 50
   identifier = "tutorial"
   url = "https://getdoks.org/tutorial/introduction/"

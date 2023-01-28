@@ -1,7 +1,7 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "ROSS"
 titleSeparator = "-"
 titleAddition = "Архитектура ROSS"
 description = "ROSS – это современная архитектура для сложных клиентских приложений с разветвленной бизнес-логикой и одновременно высокими требованиями к гибкости и тестируемости."
@@ -14,10 +14,6 @@ images = ["doks.png"]
 ogLocale = "ru-RU"
 domainTLD = "doks.netlify.app"
 titleHome = "Doks Theme"
-
-## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
 
 ## JSON-LD
 # schemaType = "Person"
@@ -65,10 +61,10 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+#footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
 
 # Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = "Copyright (c) 2023-2023 Yury Dubovoy"
 
 # Alert
 alert = false
