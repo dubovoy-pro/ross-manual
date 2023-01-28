@@ -1,4 +1,4 @@
-baseurl = "https://doks-child-theme.netlify.app/"
+baseurl = "https://rossmanual.com/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -9,8 +9,7 @@ paginate = 7
 rssLimit = 10
 
 # Multilingual
-defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
+defaultContentLanguage = "ru"
 # defaultContentLanguageInSubdir = true
 
 # add redirects/headers
