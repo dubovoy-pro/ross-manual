@@ -1,0 +1,10 @@
+[ru]
+  languageName = "Русский"
+  contentDir = "content/ru"
+  weight = 10
+  [ru.params]
+    languageISO = "RU"
+    languageTag = "ru-RU"
+    titleAddition = "Архитектура ROSS"
+    description = "ROSS – это современная архитектура для сложных клиентских приложений."
+    titleHome = "Архитектура ROSS"
