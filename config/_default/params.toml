@@ -10,29 +10,27 @@ description = "ROSS – это современная архитектура д�
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["ross_logo.png"]
 ogLocale = "ru-RU"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+domainTLD = "rossmanual.com"
+titleHome = "rossmanual.com"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "Ross"
+schemaAuthor = "Yury Dubovoy"
+schemaAuthorGitHub = "https://github.com/dubovoy-pro"
 schemaLocale = "ru-RU"
-schemaLogo = "logo-doks.png"
+schemaLogo = "ross_logo.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "ross_logo.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
+schemaTwitter = ""
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaGitHub = "https://github.com/dubovoy-pro/ross-manual"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -61,22 +59,15 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-#footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+#footer = "Powered by <a class=\"text-muted\" href=\"https://github.com/dubovoy-pro/\">Dubovoy.pro</a>"
 
 # Feed
 copyRight = "Copyright (c) 2023-2023 Yury Dubovoy"
 
-# Alert
-alert = false
-alertDismissable = true
-# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
-
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
-#repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/dubovoy-pro/ross-manual"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false

@@ -1,11 +1,11 @@
 [[docs]]
-  name = "Prologue"
+  name = "Обзор"
   weight = 10
-  identifier = "prologue"
-  url = "/docs/prologue/"
+  identifier = "overview"
+  url = "/docs/overview/"
 
 [[docs]]
-  name = "Help"
+  name = "Руководство"
   weight = 60
   identifier = "help"
   url = "/docs/help/"
@@ -30,8 +30,8 @@
 
 [[main]]
   name = "Документация"
-  url = "/docs/prologue/introduction/"
-# url = "/docs/1.0/prologue/introduction/"
+  url = "/docs/overview/introduction/"
+# url = "/docs/1.0/overview/introduction/"
   weight = 10
 
 # [[main]]
@@ -48,20 +48,20 @@
   name = "Начать"
   weight = 30
   identifier = "get-started"
-  url = "/docs/prologue/introduction/"
+  url = "/docs/overview/introduction/"
 
 [[main]]
-  name = "Быстрый старт"
+  name = "Обзор"
   weight = 40
-  identifier = "quick-start"
-  url = "/docs/prologue/quick-start/"
+  identifier = "tutorial"
+  url = "/docs/overview/introduction/"
   parent = "get-started"
 
 [[main]]
-  name = "Руководство"
+  name = "Быстрый старт"
   weight = 50
-  identifier = "tutorial"
-  url = "https://getdoks.org/tutorial/introduction/"
+  identifier = "quick-start"
+  url = "/docs/quick-start/start/"
   parent = "get-started"
 
 [[social]]

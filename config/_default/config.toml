@@ -61,7 +61,7 @@ rel  = "sitemap"
   tag = "tags"
 
 [permalinks]
-  blog = "/blog/:title/"
+  blog = "/blog/:filename/"
 # docs = "/docs/1.0/:sections[1:]/:title/"
 
 [minify.tdewolff.html]
@@ -80,3 +80,5 @@ rel  = "sitemap"
     [[related.indices]]
     name = "date"
     weight = 10
+
+staticDir = ['static']
