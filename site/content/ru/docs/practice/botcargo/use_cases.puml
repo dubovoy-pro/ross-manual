@@ -1,0 +1,30 @@
+@startuml use_cases
+left to right direction
+rectangle "Управление доставками" {
+  usecase (заказывать\nдоставку) as order_ship
+  usecase (оплачивать\nдоставку) as pay_ship
+  usecase (просматривать\nстатус доставки) as view_ships
+}
+rectangle "Управление аккаунтом" {
+  usecase (регистрация\nи/или логин) as auth
+  usecase (логаут) as logout
+  usecase (удаление\nаккаунта) as delete_account
+  usecase (просматривать\nстатус доставки) as view_ships
+}
+usecase (обновлять\nстатус доставок) as update_ships
+actor :Пользователь: as user
+actor :Сервер: as server
+
+
+user --> order_ship
+user --> pay_ship
+user --> view_ships
+
+user --> auth
+user --> logout
+user --> delete_account
+
+server --> update_ships
+server --> logout
+@enduml
+

@@ -47,9 +47,10 @@
   source = "static"
   target = "static"
 
-#  [[mounts]]
-#    source = "content"
-#    target = "content"
+ [[mounts]]
+   source = "content/ru"
+   target = "content"
+   excludeFiles = ['docs/**/*.puml']
 
 [[mounts]]
   source = "layouts"

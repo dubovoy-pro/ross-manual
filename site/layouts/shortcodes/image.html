@@ -1,0 +1,13 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $title := .Get "title" }}
+
+<div align="center" style="margin-top: 50px; margin-bottom: 20px">
+  <figure>
+    <img src="{{ $src }}"
+         alt="{{ $alt }}"
+         decoding="async"
+    >
+    <figcaption>{{ $title }}</figcaption>
+</figure>
+</div>

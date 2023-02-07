@@ -82,3 +82,4 @@ rel  = "sitemap"
     weight = 10
 
 staticDir = ['static']
+ignoreFiles = ["\\.puml$"]
