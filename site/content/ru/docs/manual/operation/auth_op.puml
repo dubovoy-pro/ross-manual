@@ -1,0 +1,37 @@
+@startuml auth_op
+skinparam maxMessageSize 120
+
+participant "AuthOp" as authOp
+boundary "User" as user
+box "IRouter"
+participant "IPhoneVС" as phoneVС
+participant "ICodeVС" as codeVC
+end box
+participant "IAuthVM" as authVM
+participant "IAuthAPI" as authApi
+boundary "SMS-шлюз" as smsGate
+
+note over phoneVС, codeVC #PaleGreen: Вью-контроллеры\nсоздает роутер
+/ note over authVM #PaleGreen: Одна вью-модель для\nдвух экранов входа
+/ note over authApi #PaleGreen: сервис инкпасулирует\nAPI авторизации
+
+authOp-[#DarkBlue]>o phoneVС: начало
+activate authVM
+activate phoneVС
+user -> phoneVС: номер телефона
+phoneVС -> authVM: номер телефона
+authVM -> authApi: номер телефона
+authVM <- authApi: токен авторизации
+authVM -> codeVC: запросить смс-код
+deactivate phoneVС
+activate codeVC
+authApi -> smsGate: номер и смс-код
+smsGate -> user: смс-код
+user -> codeVC: смс-код
+codeVC -> authVM: смс-код
+authVM -> authApi: токен и смс-код
+authOp<[#DarkBlue]-o authVM: завершение
+deactivate authVM
+deactivate codeVC
+
+@enduml
