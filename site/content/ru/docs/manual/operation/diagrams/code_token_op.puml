@@ -1,0 +1,28 @@
+@startuml code_token_op
+skinparam maxMessageSize 200
+autonumber "<font color=Maroon><b>"
+
+participant "CodeOp" as codeOp order 10
+boundary "User" as user order 20
+box "IRouter"
+participant "ICodeVС" as codeVC order 30
+end box
+participant "ICodeVM" as codeVM order 40
+participant "IAuthAPI" as authApi order 50
+boundary "SMS-шлюз" as smsGate order 60
+
+codeOp-[#DarkBlue]>o codeVM: начало\n[токен авторизации]
+activate codeVC
+activate codeVM
+codeVM -> authApi: запрос смс-кода по токену
+authApi -> smsGate: номер и смс-код
+smsGate -> user: смс-код
+user -> codeVC: смс-код
+codeVC -> codeVM: смс-код
+codeVM -> authApi: токен и смс-код
+codeVM <--- authApi: результат проверки
+codeOp<[#DarkBlue]-o codeVM: завершение\n[результат проверки]
+deactivate codeVM
+deactivate codeVC
+
+@enduml

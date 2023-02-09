@@ -12,6 +12,8 @@ participant "IStorage" as storage order 50
 participant "IAuthAPI" as authApi order 60
 boundary "SMS-шлюз" as smsGate order 70
 
+note over codeVM #PaleGreen: Отдельная вью-модель\nдля кода подтверждения
+
 codeOp-[#DarkBlue]>o codeVC: начало
 activate codeVC
 activate codeVM

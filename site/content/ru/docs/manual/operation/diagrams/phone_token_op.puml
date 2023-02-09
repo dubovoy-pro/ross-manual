@@ -9,8 +9,6 @@ end box
 participant "IPhoneVM" as phoneVM order 40
 participant "IAuthAPI" as authApi order 50
 
-note over phoneVM #PaleGreen: Отдельная вью-модель\nдля номера телефона
-
 phoneOp-[#DarkBlue]>o phoneVС: начало
 activate phoneVM
 activate phoneVС
