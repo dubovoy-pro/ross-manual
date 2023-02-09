@@ -1,0 +1,25 @@
+@startuml phone_token_op
+autonumber "<font color=Maroon><b>"
+
+participant "PhoneOp" as phoneOp order 10
+boundary "User" as user order 20
+box "IRouter"
+participant "IPhoneVС" as phoneVС order 30
+end box
+participant "IPhoneVM" as phoneVM order 40
+participant "IAuthAPI" as authApi order 50
+
+note over phoneVM #PaleGreen: Отдельная вью-модель\nдля номера телефона
+
+phoneOp-[#DarkBlue]>o phoneVС: начало
+activate phoneVM
+activate phoneVС
+user -> phoneVС: номер телефона
+phoneVС -> phoneVM: номер телефона
+phoneVM -> authApi: номер телефона
+phoneVM <--- authApi: токен авторизации
+phoneOp<[#DarkBlue]-o phoneVM: завершение [токен авторизации]
+deactivate phoneVС
+deactivate phoneVM
+
+@enduml

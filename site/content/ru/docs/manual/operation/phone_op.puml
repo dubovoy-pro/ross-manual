@@ -1,0 +1,28 @@
+@startuml phone_op
+skinparam maxMessageSize 120
+autonumber "<font color=Maroon><b>"
+
+participant "PhoneOp" as phoneOp order 10
+boundary "User" as user order 20
+box "IRouter"
+participant "IPhoneVС" as phoneVС order 30
+end box
+participant "IPhoneVM" as phoneVM order 40
+participant "IStorage" as storage order 50
+participant "IAuthAPI" as authApi order 60
+
+note over phoneVM #PaleGreen: Отдельная вью-модель\nдля номера телефона
+
+phoneOp-[#DarkBlue]>o phoneVС: начало
+activate phoneVM
+activate phoneVС
+user -> phoneVС: номер телефона
+phoneVС -> phoneVM: номер телефона
+phoneVM -> authApi: номер телефона
+phoneVM <--- authApi: токен авторизации
+phoneVM -> storage: токен авторизации
+phoneOp<[#DarkBlue]-o phoneVM: завершение
+deactivate phoneVС
+deactivate phoneVM
+
+@enduml
