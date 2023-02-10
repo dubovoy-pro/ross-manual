@@ -1,0 +1,8 @@
+@startuml phone_vm
+interface IStorage
+interface IAuthAPI
+class PhoneViewModel
+
+PhoneViewModel -up-> IStorage : use
+PhoneViewModel -up-> IAuthAPI : use
+@enduml
