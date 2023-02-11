@@ -21,10 +21,10 @@ authOp-[#DarkBlue]>o phoneVС: начало
 activate authVM
 activate phoneVС
 group Экран ввода номера телефона
+' phoneVС -> authVM: номер телефона
+' authVM -> authApi: номер телефона
+' authVM <--- authApi: токен авторизации
 user -> phoneVС: номер телефона
-phoneVС -> authVM: номер телефона
-authVM -> authApi: номер телефона
-authVM <--- authApi: токен авторизации
 authVM -> storage: токен авторизации
 deactivate phoneVС
 end
