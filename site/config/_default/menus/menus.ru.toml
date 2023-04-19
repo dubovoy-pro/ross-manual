@@ -30,6 +30,7 @@
 
 [[main]]
   name = "Документация"
+  identifier = "introduction"
   url = "/docs/overview/introduction/"
 # url = "/docs/1.0/overview/introduction/"
   weight = 10
