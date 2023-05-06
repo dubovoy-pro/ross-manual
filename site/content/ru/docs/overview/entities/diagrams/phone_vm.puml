@@ -9,6 +9,6 @@ class PhoneOp
 PhoneViewModel -up-> IAuthAPI : use
 PhoneViewModel -up-|> IPhoneVM
 PhoneViewModel -up-> IStorage : use
-PhoneOp -up-> PhoneViewModel : create
+PhoneOp -right-> PhoneViewModel : create
 IRouter -down-> IPhoneVM : use
 @enduml
