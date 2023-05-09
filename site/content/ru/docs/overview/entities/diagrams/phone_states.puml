@@ -1,0 +1,32 @@
+@startuml phone_states
+hide empty description
+scale 700 width
+[*] -> PhoneScreen
+PhoneScreen -> CodeScreen : Успех
+CodeScreen -[#DD0000]-> Waiting : Отмена\n(используем\nдругой номер)
+CodeScreen -[#DD0000]-> Waiting : Превышено\nколичество\nпопыток запроса
+PhoneScreen -[#DD0000]-> Waiting : Превышено\nколичество\nпопыток запроса
+Waiting -> PhoneScreen : Минута\nпрошла
+CodeScreen -> [*] 
+state "TimerScreen" as Waiting {
+Waiting: Показываем таймер обратного отсчета
+}
+state PhoneScreen {
+  state "Ожидаем ввода\nномера телефона" as waitPhone
+  state "Запрос СМС-\nподтверждения" as requestCode
+  [*] --> waitPhone
+  requestCode -[#DD0000]-> waitPhone : Ошибка\nзапроса 
+  waitPhone --> requestCode : Номер      \nвведен      \n
+  requestCode -down-> [*]: Успех
+}
+state CodeScreen {
+  state "Ожидаем ввода\nкода подтверждения" as waitCode
+  state "Запрос токена\nавторизации" as requestToken
+  state "Сохраняем токен" as saveToken
+  [*] --> waitCode
+  requestToken -[#DD0000]-> waitCode : Ошибка
+  requestToken -down-> saveToken : Успех
+  waitCode --> requestToken : Код      \nвведен      \n
+  saveToken -down-> [*]
+}
+@enduml
