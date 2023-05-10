@@ -1,0 +1,45 @@
+@startuml auth_op_ext
+skinparam maxMessageSize 120
+autonumber "<font color=Maroon><b>"
+
+participant "AuthOp" as authOp order 10
+boundary "User" as user order 20
+box "UI"
+participant "IPhoneVС" as phoneVС order 30
+participant "ICodeVС" as codeVC order 40
+end box
+participant "IAuthVM" as authVM order 50
+participant "IStorage" as storage order 60
+participant "IAuthAPI" as authApi order 70
+boundary "SMS-шлюз" as smsGate order 80
+
+note over authVM #PaleGreen: Одна вью-модель для\nдвух экранов входа
+/ note over authApi #PaleGreen: сервис инкпасулирует\nAPI авторизации
+
+authOp-[#DarkBlue]>o phoneVС: начало
+activate authVM
+activate phoneVС
+group Экран ввода номера телефона
+user -> phoneVС: номер телефона
+phoneVС -> authVM: номер телефона
+authVM -> authApi: номер телефона
+authVM <--- authApi: токен авторизации
+authVM -> storage: токен авторизации
+deactivate phoneVС
+end
+authVM -> codeVC: токен получен
+group Экран ввода кода подтверждения
+activate codeVC
+authVM -> authApi: запросить смс-код
+authApi -> smsGate: номер и смс-код
+smsGate -> user: смс-код
+user -> codeVC: смс-код
+codeVC -> authVM: смс-код
+authVM -> authApi: токен и смс-код
+authVM <--- authApi: результат проверки
+end
+authOp<[#DarkBlue]-o authVM: завершение
+deactivate authVM
+deactivate codeVC
+
+@enduml

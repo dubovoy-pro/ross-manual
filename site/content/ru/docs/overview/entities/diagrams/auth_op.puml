@@ -13,6 +13,8 @@ end
 group Start
 authOp -> window: makeKeyAndVisible
 end
+group AuthFlow
+end
 group onFinish
 authVM -> window: booksVC
 authOp <- authVM: onFinish event
