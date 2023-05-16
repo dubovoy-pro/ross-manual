@@ -1,0 +1,31 @@
+@startuml scenario
+skinparam  {
+  ActivityFontColor #1E4C7B
+  ActivityBorderColor #1E4C7B
+}
+start
+:    Запуск\nприложения;
+if (Есть deeplink?) then (да)
+  :запомнить;
+endif
+
+if (Первый запуск?) then (да)
+  : Показать\nонбординг;
+endif
+
+if (Вход выполнен?) then (да)
+else (нет)
+  repeat
+    :Показать вход;
+  repeat while (Ошибка?) is (да) not (нет)
+endif
+
+:Показать каталог;
+
+if (Есть deeplink?) then (да)
+  :Обработать (показать\n    карточку товара);
+endif
+
+stop
+
+@enduml
