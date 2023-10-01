@@ -1,5 +1,5 @@
 ---
-title: "Диаграммы в РОСС"
+title: "Наглядность в РОСС"
 description: ""
 lead: ""
 draft: false
