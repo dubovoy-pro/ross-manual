@@ -1,5 +1,5 @@
 ---
-title: "Тестируемость в РОСС"
+title: "Тестируемость"
 description: ""
 lead: ""
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "help"
-weight: 340
+weight: 330
 toc: true
 ---
 

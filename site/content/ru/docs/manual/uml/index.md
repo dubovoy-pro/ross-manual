@@ -1,5 +1,5 @@
 ---
-title: "Наглядность в РОСС"
+title: "Наглядность"
 description: ""
 lead: ""
 draft: false
@@ -7,7 +7,7 @@ images: []
 menu:
   docs:
     parent: "help"
-weight: 330
+weight: 320
 toc: true
 ---
 
