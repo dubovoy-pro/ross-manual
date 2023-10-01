@@ -1,5 +1,5 @@
 ---
-title: "С чего начать"
+title: "Проектирование"
 description: ""
 lead: ""
 draft: false
