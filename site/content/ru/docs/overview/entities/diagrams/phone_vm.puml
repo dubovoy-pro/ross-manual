@@ -1,14 +1,14 @@
 @startuml phone_vm
 interface IRouter
 interface IStorage
-interface IPhoneVM
+interface IPhoneViewModel
 interface IAuthAPI
 class PhoneViewModel
-class PhoneOp
+class SomeManager
 
 PhoneViewModel -up-> IAuthAPI : use
-PhoneViewModel -up-|> IPhoneVM
+PhoneViewModel -up-|> IPhoneViewModel
 PhoneViewModel -up-> IStorage : use
-PhoneOp -right-> PhoneViewModel : create
-IRouter -down-> IPhoneVM : use
+SomeManager -up-> PhoneViewModel : create
+IRouter -down-> IPhoneViewModel : use
 @enduml

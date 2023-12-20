@@ -62,7 +62,7 @@
   name = "Быстрый старт"
   weight = 50
   identifier = "quick-start"
-  url = "/docs/quick-start/start/"
+  url = "/docs/quick-start/design/"
   parent = "get-started"
 
 [[social]]
