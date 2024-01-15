@@ -10,6 +10,6 @@ prev = '/docs/ross-entities'
 
 {{< cards >}}
   {{< card link="../ross-theory/axioms" title="Аксиомы">}}
-  {{< card link="../ross-lemmas/lemmas" title="Леммы">}}
-  {{< card link="../ross-theorems/theorems" title="Теоремы">}}
+  {{< card link="../ross-theory/lemmas" title="Леммы">}}
+  {{< card link="../ross-theory/theorems" title="Теоремы">}}
 {{< /cards >}}
