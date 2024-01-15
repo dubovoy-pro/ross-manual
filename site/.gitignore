@@ -1,6 +1,9 @@
+# Hugo
+public/
+hugo_stats.json
+
+# npm
+node_modules/
+
+# macOS  
 .DS_Store
-node_modules
-public
-resources
-.netlify
-.hugo_build.lock

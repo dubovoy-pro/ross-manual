@@ -1,0 +1,56 @@
+baseURL: https://rossmanual.com/
+languageCode: ru-ru
+defaultContentLanguage: ru
+title: ROSS
+theme: hextra
+
+menu:
+  main:
+    - name: Документация
+      pageRef: /docs
+      weight: 1
+    - name: Практика
+      pageRef: /practice
+      weight: 2
+    - name: Блог
+      pageRef: /blog
+      weight: 3
+    - name: Об авторе
+      pageRef: /about
+      weight: 4
+    - name: Поиск
+      weight: 5
+      params:
+        type: search
+    - name: GitHub
+      weight: 6
+      url: "https://github.com/dubovoy-pro/ross-manual"
+      params:
+        icon: github
+
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/ross-logo.png
+      dark: images/ross-logo-dark.png
+      link: /
+      width: 40
+      height: 40
+  theme:
+    # light | dark | system
+    default: system
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: wide
+  footer:
+    enable: false
+    displayCopyright: true
+    displayPoweredBy: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,32 @@
+@startuml code_op
+skinparam maxMessageSize 120
+autonumber
+
+participant "CodeOp" as codeOp order 10
+boundary "User" as user order 20
+box "IRouter"
+participant "ICodeVС" as codeVC order 30
+end box
+participant "ICodeVM" as codeVM order 40
+participant "IStorage" as storage order 50
+participant "IAuthAPI" as authApi order 60
+boundary "SMS-шлюз" as smsGate order 70
+
+note over codeVM #PaleGreen: Отдельная вью-модель\nдля кода подтверждения
+
+codeOp->o codeVC: начало
+activate codeVC
+activate codeVM
+codeVM <- storage: token
+codeVM -> authApi: запрос смс-кода по токену
+authApi -> smsGate: номер и смс-код
+smsGate -> user: смс-код
+user -> codeVC: смс-код
+codeVC -> codeVM: смс-код
+codeVM -> authApi: токен и смс-код
+codeVM <--- authApi: результат проверки
+codeOp<-o codeVM: завершение
+deactivate codeVM
+deactivate codeVC
+
+@enduml

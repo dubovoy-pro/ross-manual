@@ -1,0 +1,8 @@
+.image-title-color {
+  color: rgb(30 58 138);
+}
+:is(html[class~="dark"]) {
+  .image-title-color {
+    color: rgb(191 219 254);
+  }
+}

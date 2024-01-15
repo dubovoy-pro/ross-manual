@@ -1,0 +1,12 @@
+@startuml phone_vm
+interface IStorage
+interface IAuthAPI
+class PhoneViewModel
+skinparam {
+    ' backgroundColor red
+    '   InterfaceStereotypeFontColor red
+    '   InterfaceFontColor red
+}
+PhoneViewModel -up-> IStorage : use
+PhoneViewModel -up-> IAuthAPI : use
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+'
+' Colors
+'
+!function $autonumberFormat() return "<font color=Maroon><b>"
+
+@enduml

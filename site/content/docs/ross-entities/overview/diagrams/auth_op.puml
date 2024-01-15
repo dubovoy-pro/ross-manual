@@ -1,0 +1,22 @@
+@startuml auth_op
+skinparam maxMessageSize 120
+autonumber
+
+participant "AuthOp" as authOp order 10
+participant "IAuthVM" as authVM order 50
+participant "Window" as window order 60
+
+group Setup
+authOp -> authVM: onFinish handler
+authOp -> window: authVC
+end
+group Start
+authOp -> window: makeKeyAndVisible
+end
+group AuthFlow
+end
+group onFinish
+authVM -> window: booksVC
+authOp <- authVM: onFinish event
+end
+@enduml

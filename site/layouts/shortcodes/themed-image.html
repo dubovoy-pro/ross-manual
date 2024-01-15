@@ -1,0 +1,18 @@
+{{ $src := .Get "src" }}
+
+{{ $srcDark := $src }}
+{{ $darked := replace $src "." "-dark."}}
+{{/*  Объединение строк  */}}
+{{ $darkedPath := printf "%s" $darked | printf "%s%s" .Page.RelPermalink | printf "%s" }}
+{{/*  fileExists требует абсолютный путь  */}}
+{{ if fileExists $darkedPath }}
+    {{ $srcDark = $darked }}
+{{ end }}
+
+{{ $title := .Get "title" }}
+
+<img class="block dark:hidden" src="{{ $src }}" alt="{{ $title }}" />
+<img class="hidden dark:block" src="{{ $srcDark }}" alt="{{ $title }}" />
+{{ if $title }}
+    <div class="image-title-color text-base font-medium" align="center">{{ $title }}</div>
+{{ end }}
