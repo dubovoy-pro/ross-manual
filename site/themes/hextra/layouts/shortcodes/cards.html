@@ -1,5 +1,3 @@
-{{ $rows := .Get "rows" | default "3" }}
+{{- $cols := .Get "cols" | default 3 -}}
 
-<div class="hextra-cards mt-4 gap-4 grid not-prose" style="--rows: {{ $rows }};">
-  {{- .Inner -}}
-</div>
+{{- partial "shortcodes/cards" (dict "cols" $cols "content" .Inner) -}}

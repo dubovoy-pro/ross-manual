@@ -1,13 +1,14 @@
-backToTop: "Наверх"
-changeLanguage: "Выбрать язык"
-changeTheme: "Изменить тему"
-copyCode: "Скопировать код"
-copyright: "© 2020-2023 Yury Dubovoy"
-dark: "Темная"
-editThisPage: "Edit this page on GitHub →"
-lastUpdated: "Last updated on"
-light: "Светлая"
-noResultsFound: "No results found."
-onThisPage: "Содержание"
-readMore: "Далее →"
-searchPlaceholder: "Поиск"
+backToTop: 'Прокрутить к началу'
+changeLanguage: 'Изменить язык'
+changeTheme: 'Изменить тему'
+copyCode: 'Скопировать код'
+copyright: '2025 Проект Hextra.'
+dark: 'Темная'
+editThisPage: 'Отредактировать страницу на GitHub →'
+lastUpdated: 'Последнее обновление'
+light: 'Светлая'
+noResultsFound: 'Ничего не найдено.'
+onThisPage: 'На этой странице'
+poweredBy: 'При поддержке Hextra'
+readMore: 'Читать далее →'
+searchPlaceholder: 'Поиск...'

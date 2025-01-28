@@ -4,23 +4,23 @@ layout = 'hextra-home'
 draft = false
 +++
 
-<div class="mt-6 mb-6">
+<div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-headline >}}
   Архитектура ROSS
 {{< /hextra/hero-headline >}}
 </div>
 
-<div class="mb-12">
+<div class="hx-mb-12">
 {{< hextra/hero-subtitle >}}
   Современная архитектура для сложных&nbsp;<br class="sm:block hidden" />клиентских приложений
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="mb-6">
+<div class="hx-mb-6">
 {{< hextra/hero-button text="Документация" link="docs" >}}
 </div>
 
-<div class="mt-6"></div>
+<div class="hx-mt-6" />
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
