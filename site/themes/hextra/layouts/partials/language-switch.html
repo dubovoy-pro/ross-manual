@@ -5,7 +5,7 @@
 
 {{- $changeLanguage := (T "changeLanguage") | default "Change language" -}}
 
-{{- if site.IsMultiLingual -}}
+{{- if hugo.IsMultilingual -}}
   <div class="flex justify-items-start {{ if $grow }}grow{{ end }}">
     <button
       title="{{ $changeLanguage }}"
